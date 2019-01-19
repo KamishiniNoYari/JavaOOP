@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="VOD">
+  <ClassDiagramComponents>
+    <Class name="Abonament" package="vod" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="typ" type="String" visibility="private"/>
+        <Field name="cena" type="float" visibility="private"/>
+        <Field name="okres" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getTyp" returnType="String" visibility="public"/>
+        <Method name="setTyp" returnType="void" visibility="public">
+          <Argument type="String" name="typ"/>
+        </Method>
+        <Method name="getCena" returnType="float" visibility="public"/>
+        <Method name="setCena" returnType="void" visibility="public">
+          <Argument type="float" name="cena"/>
+        </Method>
+        <Method name="getOkres" returnType="int" visibility="public"/>
+        <Method name="setOkres" returnType="void" visibility="public">
+          <Argument type="int" name="okres"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Dystrybutor" package="vod" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="produkty" type="ArrayList&lt;Produkt&gt;" visibility="private"/>
+        <Field name="umowa" type="ArrayList&lt;Umowa&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getProdukty" returnType="ArrayList&lt;Produkt&gt;" visibility="public"/>
+        <Method name="setProdukty" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Produkt&gt;" name="produkty"/>
+        </Method>
+        <Method name="getUmowa" returnType="ArrayList&lt;Umowa&gt;" visibility="public"/>
+        <Method name="setUmowa" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Umowa&gt;" name="umowa"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Film" package="vod" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="linki" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="czas_po_zakupie" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getLinki" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="setLinki" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="linki"/>
+        </Method>
+        <Method name="getCzas_po_zakupie" returnType="int" visibility="public"/>
+        <Method name="setCzas_po_zakupie" returnType="void" visibility="public">
+          <Argument type="int" name="czas_po_zakupie"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Klient" package="vod" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="produkty" type="ArrayList&lt;Produkt&gt;" visibility="private"/>
+        <Field name="abonament" type="Abonament" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getProdukty" returnType="ArrayList&lt;Produkt&gt;" visibility="public"/>
+        <Method name="setProdukty" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Produkt&gt;" name="produkty"/>
+        </Method>
+        <Method name="getAbonament" returnType="Abonament" visibility="public"/>
+        <Method name="setAbonament" returnType="void" visibility="public">
+          <Argument type="Abonament" name="abonament"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LiveStream" package="vod" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="data_wys" type="Date" visibility="private"/>
+        <Field name="czas_wys" type="int" visibility="private"/>
+        <Field name="cena" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getData_wys" returnType="Date" visibility="public"/>
+        <Method name="setData_wys" returnType="void" visibility="public">
+          <Argument type="Date" name="data_wys"/>
+        </Method>
+        <Method name="getCzas_wys" returnType="int" visibility="public"/>
+        <Method name="setCzas_wys" returnType="void" visibility="public">
+          <Argument type="int" name="czas_wys"/>
+        </Method>
+        <Method name="getCena" returnType="float" visibility="public"/>
+        <Method name="setCena" returnType="void" visibility="public">
+          <Argument type="float" name="cena"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Odcinek" package="vod" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="sezon" type="int" visibility="private"/>
+        <Field name="data_premiery" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSezon" returnType="int" visibility="public"/>
+        <Method name="setSezon" returnType="void" visibility="public">
+          <Argument type="int" name="sezon"/>
+        </Method>
+        <Method name="getData_premiery" returnType="Date" visibility="public"/>
+        <Method name="setData_premiery" returnType="void" visibility="public">
+          <Argument type="Date" name="data_premiery"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Produkt" package="vod" visibility="public" isAbstract="true" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="czas_trwania" type="int" visibility="private"/>
+        <Field name="opis" type="String" visibility="private"/>
+        <Field name="ocena" type="float" visibility="private"/>
+        <Field name="nazwa" type="String" visibility="private"/>
+        <Field name="zdjecie" type="Image" visibility="private"/>
+        <Field name="dataProdukcji" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getCzas_trwania" returnType="int" visibility="public"/>
+        <Method name="setCzas_trwania" returnType="void" visibility="public">
+          <Argument type="int" name="czas_trwania"/>
+        </Method>
+        <Method name="getOpis" returnType="String" visibility="public"/>
+        <Method name="setOpis" returnType="void" visibility="public">
+          <Argument type="String" name="opis"/>
+        </Method>
+        <Method name="getOcena" returnType="float" visibility="public"/>
+        <Method name="setOcena" returnType="void" visibility="public">
+          <Argument type="float" name="ocena"/>
+        </Method>
+        <Method name="getNazwa" returnType="String" visibility="public"/>
+        <Method name="setNazwa" returnType="void" visibility="public">
+          <Argument type="String" name="nazwa"/>
+        </Method>
+        <Method name="getZdjecie" returnType="Image" visibility="public"/>
+        <Method name="setZdjecie" returnType="void" visibility="public">
+          <Argument type="Image" name="zdjecie"/>
+        </Method>
+        <Method name="getDataProdukcji" returnType="Date" visibility="public"/>
+        <Method name="setDataProdukcji" returnType="void" visibility="public">
+          <Argument type="Date" name="dataProdukcji"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Promocja" package="vod" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="objete_prom" type="ArrayList&lt;Produkt&gt;" visibility="private"/>
+        <Field name="data_roz" type="Date" visibility="private"/>
+        <Field name="data_za" type="Date" visibility="private"/>
+        <Field name="upust" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getObjete_prom" returnType="ArrayList&lt;Produkt&gt;" visibility="public"/>
+        <Method name="setObjete_prom" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Produkt&gt;" name="objete_prom"/>
+        </Method>
+        <Method name="getData_roz" returnType="Date" visibility="public"/>
+        <Method name="setData_roz" returnType="void" visibility="public">
+          <Argument type="Date" name="data_roz"/>
+        </Method>
+        <Method name="getData_za" returnType="Date" visibility="public"/>
+        <Method name="setData_za" returnType="void" visibility="public">
+          <Argument type="Date" name="data_za"/>
+        </Method>
+        <Method name="getUpust" returnType="float" visibility="public"/>
+        <Method name="setUpust" returnType="void" visibility="public">
+          <Argument type="float" name="upust"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Serial" package="vod" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="sezony" type="int" visibility="private"/>
+        <Field name="odcinki" type="HashSet&lt;Odcinek&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSezony" returnType="int" visibility="public"/>
+        <Method name="setSezony" returnType="void" visibility="public">
+          <Argument type="int" name="sezony"/>
+        </Method>
+        <Method name="getOdcinki" returnType="HashSet&lt;Odcinek&gt;" visibility="public"/>
+        <Method name="setOdcinki" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Odcinek&gt;" name="odcinki"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StalyProdukt" package="vod" visibility="public" isAbstract="true" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="lista_aktorow" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="gatunek" type="String" visibility="private"/>
+        <Field name="cena" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getLista_aktorow" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="setLista_aktorow" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="lista_aktorow"/>
+        </Method>
+        <Method name="getGatunek" returnType="String" visibility="public"/>
+        <Method name="setGatunek" returnType="void" visibility="public">
+          <Argument type="String" name="gatunek"/>
+        </Method>
+        <Method name="getCena" returnType="float" visibility="public"/>
+        <Method name="setCena" returnType="void" visibility="public">
+          <Argument type="float" name="cena"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="System" package="vod" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="produkty" type="HashSet&lt;Produkt&gt;" visibility="private"/>
+        <Field name="klienci" type="HashSet&lt;Klient&gt;" visibility="private"/>
+        <Field name="dystrybutorzy" type="HashSet&lt;Dystrybutor&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getProdukty" returnType="HashSet&lt;Produkt&gt;" visibility="public"/>
+        <Method name="setProdukty" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Produkt&gt;" name="produkty"/>
+        </Method>
+        <Method name="getKlienci" returnType="HashSet&lt;Klient&gt;" visibility="public"/>
+        <Method name="setKlienci" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Klient&gt;" name="klienci"/>
+        </Method>
+        <Method name="getDystrybutorzy" returnType="HashSet&lt;Dystrybutor&gt;" visibility="public"/>
+        <Method name="setDystrybutorzy" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Dystrybutor&gt;" name="dystrybutorzy"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Umowa" package="vod" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Uzytkownik" package="vod" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nazwa" type="String" visibility="private"/>
+        <Field name="data_urodzenia" type="SimpleDateFormat" visibility="private"/>
+        <Field name="e_mail" type="String" visibility="private"/>
+        <Field name="numer_karty" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNazwa" returnType="String" visibility="public"/>
+        <Method name="setNazwa" returnType="void" visibility="public">
+          <Argument type="String" name="nazwa"/>
+        </Method>
+        <Method name="getData_urodzenia" returnType="SimpleDateFormat" visibility="public"/>
+        <Method name="setData_urodzenia" returnType="void" visibility="public">
+          <Argument type="SimpleDateFormat" name="data_urodzenia"/>
+        </Method>
+        <Method name="getE_mail" returnType="String" visibility="public"/>
+        <Method name="setE_mail" returnType="void" visibility="public">
+          <Argument type="String" name="e_mail"/>
+        </Method>
+        <Method name="getNumer_karty" returnType="double" visibility="public"/>
+        <Method name="setNumer_karty" returnType="void" visibility="public">
+          <Argument type="double" name="numer_karty"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VOD" package="vod" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Wlasciciel" package="vod" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="zysk" type="double" visibility="private"/>
+        <Field name="zarobki" type="double" visibility="private"/>
+        <Field name="straty" type="double" visibility="private"/>
+        <Field name="umowy" type="ArrayList&lt;Umowa&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getZysk" returnType="double" visibility="public"/>
+        <Method name="setZysk" returnType="void" visibility="public">
+          <Argument type="double" name="zysk"/>
+        </Method>
+        <Method name="getZarobki" returnType="double" visibility="public"/>
+        <Method name="setZarobki" returnType="void" visibility="public">
+          <Argument type="double" name="zarobki"/>
+        </Method>
+        <Method name="getStraty" returnType="double" visibility="public"/>
+        <Method name="setStraty" returnType="void" visibility="public">
+          <Argument type="double" name="straty"/>
+        </Method>
+        <Method name="getUmowy" returnType="ArrayList&lt;Umowa&gt;" visibility="public"/>
+        <Method name="setUmowy" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Umowa&gt;" name="umowy"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dystrybutorzy" source="vod.System" target="vod.Dystrybutor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashSet&lt;Dystrybutor&gt;"/>
+    <HasRelation name="abonament" source="vod.Klient" target="vod.Abonament" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="vod.StalyProdukt" target="vod.Produkt"/>
+    <UseRelation source="vod.Klient" target="vod.Produkt" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="umowy" source="vod.Wlasciciel" target="vod.Umowa" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Umowa&gt;"/>
+    <UseRelation source="vod.System" target="vod.Klient" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produkty" source="vod.System" target="vod.Produkt" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashSet&lt;Produkt&gt;"/>
+    <UseRelation source="vod.Dystrybutor" target="vod.Produkt" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vod.Wlasciciel" target="vod.Umowa" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vod.Dystrybutor" target="vod.Umowa" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="vod.Odcinek" target="vod.Serial"/>
+    <IsRelation name="is" source="vod.Serial" target="vod.StalyProdukt"/>
+    <HasRelation name="produkty" source="vod.Klient" target="vod.Produkt" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produkt&gt;"/>
+    <IsRelation name="is" source="vod.Klient" target="vod.Uzytkownik"/>
+    <HasRelation name="klienci" source="vod.System" target="vod.Klient" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashSet&lt;Klient&gt;"/>
+    <HasRelation name="umowa" source="vod.Dystrybutor" target="vod.Umowa" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Umowa&gt;"/>
+    <IsRelation name="is" source="vod.Film" target="vod.StalyProdukt"/>
+    <HasRelation name="objete_prom" source="vod.Promocja" target="vod.Produkt" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produkt&gt;"/>
+    <HasRelation name="produkty" source="vod.Dystrybutor" target="vod.Produkt" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produkt&gt;"/>
+    <UseRelation source="vod.Klient" target="vod.Abonament" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="vod.LiveStream" target="vod.Produkt"/>
+    <HasRelation name="odcinki" source="vod.Serial" target="vod.Odcinek" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashSet&lt;Odcinek&gt;"/>
+    <UseRelation source="vod.Serial" target="vod.Odcinek" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vod.System" target="vod.Dystrybutor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vod.System" target="vod.Produkt" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vod.Promocja" target="vod.Produkt" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
